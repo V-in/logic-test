@@ -31,10 +31,10 @@ def run(data_set):
         process_one(item)
     # Reorder
     for item in managers:
-        managers[item].sort(reverse=True, key=lambda x: x['priority'])
+        managers[item].sort(reverse=False, key=lambda x: x['priority'])
         managers[item] = list(map(lambda x: x['name'], managers[item]))
     for item in watchers:
-        watchers[item].sort(reverse=True, key=lambda x: x['priority'])
+        watchers[item].sort(reverse=False, key=lambda x: x['priority'])
         watchers[item] = list(map(lambda x: x['name'], watchers[item]))
 
 if __name__ == '__main__':
